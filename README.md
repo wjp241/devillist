@@ -1,6 +1,8 @@
 # devillist
 
-a script for autofilling coverletter on Angelist
+User: I don't want to manually copy and paste coverletter
+
+Solution: a script for autofilling coverletter on Angelist
 
 # Recaps
 
