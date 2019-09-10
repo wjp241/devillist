@@ -66,25 +66,19 @@ function handleJobOnClick(clickedJob) {
   initOpenModalObserver(companyName)
 }
 
-//To Do: add the below handler to the very first initial job
-function handleInitialJobOnClick() {
-  console.log('something')
-}
-
 //add onclick to all the jobs which will begin the process of auto-filling coverletter into the textarea of openened modal
-function addOnClickToJobs(jobs) {
+function addOnClickToJobs(jobs, isInitial = false) {
   jobs.forEach(
     job =>
       (job.onclick = () => {
-        console.log('when job was clicked!!!!', job.className)
-        if (!!job.className.includes('expanded')) {
-          handleJobOnClick(job)
+        if (isInitial || !!job.className.includes('expanded')) {
+          return handleJobOnClick(job)
         }
       }),
   )
 }
 
-addOnClickToJobs(initialJobs)
+addOnClickToJobs(initialJobs, true)
 
 var jobsObserver = new MutationObserver(mutations => {
   let jobtables = document.getElementsByClassName('browse_startups_table')
