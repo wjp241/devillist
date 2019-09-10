@@ -1,6 +1,6 @@
 # devillist
 
-script for automating job application on Angelist
+a script for autofilling coverletter on Angelist
 
 # Recaps
 
